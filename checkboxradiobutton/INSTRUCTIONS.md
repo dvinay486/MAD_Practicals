@@ -1,6 +1,6 @@
-# MSBTE Practical: Develop a program to design Checkbox and Radiobutton (Course: 316006)
+# Develop a program to design Checkbox and Radiobutton
 
-This guide explains how to create an Android application that uses CheckBoxes and RadioButtons to collect user input.
+This explains how to create an Android application that uses CheckBoxes and RadioButtons to collect user input.
 
 ## Step 1: Design the UI (Layout)
 Open `app/src/main/res/layout/activity_main.xml`. We use a `LinearLayout` with `vertical` orientation.
@@ -29,8 +29,3 @@ Open `app/src/main/java/com/example/checkboxradiobutton/MainActivity.kt`.
 3. Select your skills using Checkboxes.
 4. Select your gender using Radio Buttons.
 5. Click **Submit** to see the summary at the bottom.
-
-## Practical Outcomes (PO)
-- Students will understand how to implement multiple-choice selection using CheckBox.
-- Students will understand how to implement single-choice selection using RadioButton and RadioGroup.
-- Students will learn how to handle UI events in Kotlin.
