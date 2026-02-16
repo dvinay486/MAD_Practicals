@@ -1,0 +1,42 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!--
+        Base application theme.
+        This style defines the global look and feel of your app when it's running.
+        'Theme.Material3.DayNight.NoActionBar' provides a modern Material 3 design
+        that automatically switches between light and dark modes.
+    -->
+    <style name="Base.Theme.Splashscreenpractice" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <!--
+        The actual theme used by the application (as specified in AndroidManifest.xml).
+        It inherits all properties from the Base theme.
+    -->
+    <style name="Theme.Splashscreenpractice" parent="Base.Theme.Splashscreenpractice" />
+
+    <!--
+        Special theme for the SplashScreen API (Android 12+ compatibility).
+        This theme is applied to the Activity that handles the splash screen
+        via 'android:theme' in the manifest.
+    -->
+    <style name="Theme.App.Starting" parent="Theme.SplashScreen">
+        <!-- The background color of the splash screen. -->
+        <item name="windowSplashScreenBackground">#FFFFFF</item>
+
+        <!--
+            The icon displayed in the center of the splash screen.
+            Using @android:color/transparent if you want to handle the logo
+            manually in your activity layout instead of using the system icon.
+        -->
+        <item name="windowSplashScreenAnimatedIcon">@android:color/transparent</item>
+
+        <!--
+            The theme to switch to after the splash screen animation is finished.
+            This ensures that once the app is ready, it looks like your main app theme.
+        -->
+        <item name="postSplashScreenTheme">@style/Theme.Splashscreenpractice</item>
+    </style>
+
+</resources>
