@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Bluetooth Wifi Control</string>
+    <string name="title_text">Bluetooth &amp; Wi-Fi Control</string>
+    <string name="btn_bluetooth_on">Turn Bluetooth ON</string>
+    <string name="btn_bluetooth_off">Turn Bluetooth OFF</string>
+    <string name="btn_wifi_on">Turn Wi-Fi ON</string>
+    <string name="btn_wifi_off">Turn Wi-Fi OFF</string>
+    <string name="msg_bt_not_supported">Bluetooth not supported on this device</string>
+    <string name="msg_bt_turning_on">Turning Bluetooth ON...</string>
+    <string name="msg_bt_already_on">Bluetooth is already ON</string>
+    <string name="msg_bt_turning_off">Turning Bluetooth OFF...</string>
+    <string name="msg_wifi_turning_on">Turning Wi-Fi ON...</string>
+    <string name="msg_wifi_turning_off">Turning Wi-Fi OFF...</string>
+    <string name="msg_perm_required">Permission required to perform this action</string>
+</resources>
