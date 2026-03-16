@@ -1,0 +1,50 @@
+Student Registration System with SQLite Database
+
+This project demonstrates how to create a basic Android application to insert and retrieve data using a SQLite database. This is a fundamental skill for Computer Engineering students.
+
+### Program Structure
+
+1. activity_main.xml (Layout File)
+   - Purpose: Defines the User Interface (UI).
+   - Components Used:
+     - EditText: For user input (Name and Email).
+     - Button: To trigger Insert and Retrieve actions.
+     - TextView: To display the retrieved data from the database.
+     - LinearLayout: To arrange the elements vertically.
+
+2. StudentDbHelper.kt (Database Helper Class)
+   - Why use this? This class extends SQLiteOpenHelper, which is the standard Android API for managing database creation and versioning. It keeps the database logic separate from the Activity.
+   - Key Methods:
+     - onCreate(): Executed once when the database is first created. We use it to run the SQL command that creates our 'students' table.
+     - onUpgrade(): Executed when the DATABASE_VERSION is incremented. It's used to update the database schema if needed (e.g., adding new columns).
+
+3. MainActivity.kt (Main Logic)
+   - Why use this? This is the entry point of the app. It connects the UI with the database.
+   - Key Methods:
+     - onCreate(): Initializes the UI elements and the database helper.
+     - insertData(): 
+       - Reads values from EditText fields.
+       - Uses writableDatabase to get access to write to the DB.
+       - Uses ContentValues (a key-value pair container) to store data for the row.
+       - Calls db.insert() to save the record.
+     - retrieveData():
+       - Uses readableDatabase.
+       - Uses db.query() to fetch all records.
+       - Uses a Cursor to iterate through the results and build a string to display.
+
+### Steps to Run/Recreate this Program:
+
+1. Create a New Project: Choose "Empty Views Activity" (or similar) in Android Studio.
+2. Design the UI: Copy the code into `app/src/main/res/layout/activity_main.xml`. We use a simple vertical LinearLayout.
+3. Create the Database Helper: Create a new Kotlin class named `StudentDbHelper.kt` in your package. This handles the SQL 'CREATE TABLE' logic.
+4. Implement the Logic: Copy the code into `MainActivity.kt`. This handles button clicks and calls the database methods.
+5. Run the App: Click the 'Run' button in Android Studio.
+   - Enter a Name and Email.
+   - Click "Insert Data". A Toast message will confirm success.
+   - Click "Retrieve Data". The list of registered students will appear at the bottom.
+
+### Key Concepts for Students:
+- SQLite: A lightweight, serverless database engine built into Android.
+- SQL: Structured Query Language used to interact with the database (CREATE, INSERT, SELECT).
+- Cursor: An object that points to a specific row in the query results, allowing you to move through the data.
+- ContentValues: A helper class used to insert new rows into tables.
