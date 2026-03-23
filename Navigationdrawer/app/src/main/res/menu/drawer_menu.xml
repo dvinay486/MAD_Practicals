@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This XML file defines the menu items that will appear in the Navigation Drawer. -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Grouping items for better organization -->
+    <group android:checkableBehavior="single">
+        <!--
+           Note: We use standard Android icons here.
+           In a real project, you would usually add your own icons to the res/drawable folder.
+        -->
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@android:drawable/ic_menu_manage"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@android:drawable/ic_menu_gallery"
+            android:title="@string/menu_gallery" />
+        <item
+            android:id="@+id/nav_slideshow"
+            android:icon="@android:drawable/ic_menu_slideshow"
+            android:title="@string/menu_slideshow" />
+    </group>
+</menu>
